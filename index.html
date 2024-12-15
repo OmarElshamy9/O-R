@@ -1,99 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Wedding Invitation</title>
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Arial, sans-serif';
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-        .section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-            position: relative;
-        }
-
-        /* Section 1 - Welcome */
-        #welcome {
-            
-            background: url('https://raw.githubusercontent.com/OmarElshamy9/OmarAndRana/main/MON_3767.jpg') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: black;
-        }
-        #welcome h1, #welcome p {
-            color: black;
-        }
-
-        /* Section 3 - Event Details */
-        #details {
-            background: linear-gradient(135deg, #6DD5FA, #2980B9);
-            color: white;
-        }
-        #details h1 {
-            font-size: 3em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-        #details p {
-            font-size: 1.5em;
-            font-weight: 500;
-            margin: 10px 0;
-        }
-
-        /* Section 4 - RSVP */
-        #rsvp {
-            background: url('https://raw.githubusercontent.com/OmarElshamy9/OmarAndRana/main/MON_3838.jpg') no-repeat center center/cover;
-            color: white;
-        }
-        #rsvp h1, #rsvp p {
-            color: white;
-        }
-
-        /* Animated Flowers */
-        .flower {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background: url('https://cdn-icons-png.flaticon.com/512/4303/4303671.png') no-repeat center center/contain;
-            animation: float 10s linear infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-200px) translateX(50px);
-                opacity: 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Background Music -->
-    <audio autoplay loop style="display:none;">
-        <source src="https://p.scdn.co/mp3-preview/your-preview-link" type="audio/mpeg">
+<audio autoplay loop style="display:none;">
+        <source src="https://docs.google.com/uc?export=download&id=1DNYSpoF8KqRjuAJMiVZfKCnBwW_2FWo2" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <!-- Section 1: Welcome -->
-    <div id="welcome" class="section fade" style="transform: translateY(-2cm);">
+    <div id="welcome" class="section fade">
         <div>
             <h1>بسم الله الرحمن الرحيم</h1>
             <h1>TOGETHER WITH THEIR FAMILIES</h1>
@@ -119,13 +30,6 @@
             <a href="https://your-rsvp-link.com" class="btn">RSVP Now</a>
         </div>
     </div>
-
-    <!-- Animated Flowers -->
-    <div class="flower" style="left: 10%; animation-delay: 0s;"></div>
-    <div class="flower" style="left: 30%; animation-delay: 2s;"></div>
-    <div class="flower" style="left: 50%; animation-delay: 4s;"></div>
-    <div class="flower" style="left: 70%; animation-delay: 6s;"></div>
-    <div class="flower" style="left: 90%; animation-delay: 8s;"></div>
 
     <script>
         // JavaScript for scroll animations
