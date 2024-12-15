@@ -1,5 +1,101 @@
-<audio autoplay loop style="display:none;">
-        <source src="https://open.spotify.com/track/3CeCwYWvdfXbZLXFhBrbnf" type="audio/mpeg">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wedding Invitation</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial, sans-serif';
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .section h1, .section p {
+            margin: 0;
+        }
+        
+        /* Section 1 - Welcome */
+        #welcome {
+            background: url('https://raw.githubusercontent.com/OmarElshamy9/OmarAndRana/main/MON_3767.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #welcome h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        #welcome p {
+            font-size: 1.5em;
+        }
+        
+        /* Section 3 - Event Details */
+        #details {
+            background: linear-gradient(135deg, #6DD5FA, #2980B9);
+        }
+        #details h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        #details p {
+            font-size: 1.5em;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        
+        /* Section 4 - RSVP */
+        #rsvp {
+            background: url('https://raw.githubusercontent.com/OmarElshamy9/OmarAndRana/main/MON_3838.jpg') no-repeat center center/cover;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Smooth Scroll Animation */
+        .fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out;
+        }
+        .fade.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Music -->
+    <audio autoplay loop style="display:none;">
+        <source src="https://p.scdn.co/mp3-preview/your-preview-link" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
