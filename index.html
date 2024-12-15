@@ -1,52 +1,71 @@
-<audio autoplay loop style="display:none;">
-        <source src="https://docs.google.com/uc?export=download&id=1DNYSpoF8KqRjuAJMiVZfKCnBwW_2FWo2" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar & Rana's Wedding Invitation</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial, sans-serif';
+            background-color: #f9f9f9;
+            color: black;
+            overflow-x: hidden;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 10px 0;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
     <!-- Section 1: Welcome -->
-    <div id="welcome" class="section fade">
-        <div>
-            <h1>بسم الله الرحمن الرحيم</h1>
-            <h1>TOGETHER WITH THEIR FAMILIES</h1>
-            <h1>OMAR AND RANA</h1>
-            <h1>CORDIALLY INVITE YOU TO THEIR WEDDING</h1>
-        </div>
+    <div id="welcome" class="section">
+        <h1>بسم الله الرحمن الرحيم</h1>
+        <h1>TOGETHER WITH THEIR FAMILIES</h1>
+        <h1>OMAR AND RANA</h1>
+        <h1>CORDIALLY INVITE YOU TO THEIR WEDDING</h1>
     </div>
 
     <!-- Section 3: Event Details -->
-    <div id="details" class="section fade">
-        <div>
-            <h1>Wedding Details</h1>
-            <p>Date: 16th of May 2025</p>
-            <p>Venue: Villa Le Mariage, King Mariout, Alexandria, Egypt</p>
-        </div>
+    <div id="details" class="section">
+        <h1>Wedding Details</h1>
+        <p>Date: 16th of May 2025</p>
+        <p>Venue: Villa Le Mariage, King Mariout, Alexandria, Egypt</p>
     </div>
 
     <!-- Section 4: RSVP -->
-    <div id="rsvp" class="section fade">
-        <div>
-            <h1>RSVP</h1>
-            <p>Please let us know if you can join our celebration.</p>
-            <a href="https://your-rsvp-link.com" class="btn">RSVP Now</a>
-        </div>
+    <div id="rsvp" class="section">
+        <h1>RSVP</h1>
+        <p>Please let us know if you can join our celebration.</p>
+        <a href="https://your-rsvp-link.com" class="btn">RSVP Now</a>
     </div>
-
-    <script>
-        // JavaScript for scroll animations
-        const sections = document.querySelectorAll('.fade');
-        const options = { threshold: 0.5 };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
