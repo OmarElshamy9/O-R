@@ -61,6 +61,19 @@
         <source src="https://raw.githubusercontent.com/OmarElshamy9/OmarAndRana/main/03-taylor_swift-love_story_64kb.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    <audio id="wedding-song" loop style="display:none;">
+        <source src="https://raw.githubusercontent.com/OmarElshamy9/OmarAndRana/main/03-taylor_swift-love_story_64kb.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        // Play the song after user interaction
+        window.onload = () => {
+            const audio = document.getElementById('wedding-song');
+            document.body.addEventListener('click', () => {
+                audio.play();
+            }, { once: true });
+        };
+    </script>
 </head>
 <body>
     <!-- Section 1: Welcome -->
