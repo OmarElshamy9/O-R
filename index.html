@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wedding Invitation</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial, sans-serif';
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .section h1, .section p {
+            margin: 0;
+        }
+        
+        /* Section 1 - Welcome */
+        #welcome {
+            background: url('your-image-link-here.jpg') no-repeat center center/cover;
+        }
+        
+        /* Section 2 - Story */
+        #story {
+            background: linear-gradient(135deg, #FFD1BA, #FF9A8B);
+        }
+        
+        /* Section 3 - Event Details */
+        #details {
+            background: linear-gradient(135deg, #6DD5FA, #2980B9);
+        }
+        
+        /* Section 4 - RSVP */
+        #rsvp {
+            background: url('your-image-link-here.jpg') no-repeat center center/cover;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Smooth Scroll Animation */
+        .fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out;
+        }
+        .fade.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1: Welcome -->
+    <div id="welcome" class="section fade">
+        <div>
+            <h1>Welcome to Our Wedding</h1>
+            <p>Join us as we celebrate our love</p>
+        </div>
+    </div>
+
+    <!-- Section 2: Our Story -->
+    <div id="story" class="section fade">
+        <div>
+            <h1>Our Story</h1>
+            <p>Once upon a time... (Your story here)</p>
+        </div>
+    </div>
+
+    <!-- Section 3: Event Details -->
+    <div id="details" class="section fade">
+        <div>
+            <h1>Wedding Details</h1>
+            <p>Date: [Insert Date Here]</p>
+            <p>Venue: [Insert Venue Here]</p>
+            <a href="#rsvp" class="btn">RSVP Here</a>
+        </div>
+    </div>
+
+    <!-- Section 4: RSVP -->
+    <div id="rsvp" class="section fade">
+        <div>
+            <h1>RSVP</h1>
+            <p>Please let us know if you can join our celebration.</p>
+            <a href="https://your-rsvp-link.com" class="btn">RSVP Now</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for scroll animations
+        const sections = document.querySelectorAll('.fade');
+        const options = { threshold: 0.5 };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
