@@ -20,6 +20,7 @@
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
+            position: relative;
         }
 
         /* Section 1 - Welcome */
@@ -62,31 +63,24 @@
             color: white;
         }
 
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #fff;
-            color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #f1f1f1;
+        /* Animated Flowers */
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://cdn-icons-png.flaticon.com/512/4303/4303671.png') no-repeat center center/contain;
+            animation: float 10s linear infinite;
         }
 
-        /* Smooth Scroll Animation */
-        .fade {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 1s ease-out;
-        }
-        .fade.in-view {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200px) translateX(50px);
+                opacity: 0;
+            }
         }
     </style>
 </head>
@@ -124,6 +118,13 @@
             <a href="https://your-rsvp-link.com" class="btn">RSVP Now</a>
         </div>
     </div>
+
+    <!-- Animated Flowers -->
+    <div class="flower" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="flower" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="flower" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="flower" style="left: 70%; animation-delay: 6s;"></div>
+    <div class="flower" style="left: 90%; animation-delay: 8s;"></div>
 
     <script>
         // JavaScript for scroll animations
